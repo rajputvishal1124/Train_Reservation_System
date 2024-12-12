@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     "/seats",
     createProxyMiddleware({
-      target: "http://localhost:5000",
+      target: "https://train-reservation-system.onrender.com",
       changeOrigin: true,
     })
   );
