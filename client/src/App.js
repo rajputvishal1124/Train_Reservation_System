@@ -11,13 +11,13 @@ function App() {
   }, []);
 
   const fetchSeats = async () => {
-    const response = await axios.get("http://localhost:5000/seats");
+    const response = await axios.get("https://train-reservation-system.onrender.com/seats");
     setSeats(response.data);
   };
 
   const bookSeats = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/book-seats", {
+      const response = await axios.post("https://train-reservation-system.onrender.com/book-seats", {
         numberOfSeats: numSeats,
       });
       alert(`Seats booked: ${response.data.bookedSeats.join(", ")}`);
@@ -29,7 +29,7 @@ function App() {
 
   const clearBookings = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/clear-bookings");
+      const response = await axios.post("https://train-reservation-system.onrender.com/clear-bookings");
       console.log(response);
       alert(response.data.message);
       fetchSeats();
