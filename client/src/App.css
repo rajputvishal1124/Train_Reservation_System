@@ -1,0 +1,29 @@
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 0 10px;
+}
+
+button.clear-button {
+  background-color: #ff4d4d;
+}
+
+.seats-container {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #333;
+}
+
+.seat.booked {
+  background-color: red;
+  color: white;
+}
